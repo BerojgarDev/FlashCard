@@ -12,18 +12,14 @@ function cardDisplay(cardId, previous, next) {
 
     previous.addEventListener('click', function (ckeck) {
         if (ckeck.target) {
-            console.log("previous btn is clicked");
 
             if (count === 0 || i === 0) {
                 constantCard = cardId[i];
                 constantCard.style.display = "none";
 
                 i = cardId.length - 1;
-                console.log(i);
                 count = i + 1;
-                console.log(count);
                 let currentCard = cardId[i];
-                console.log(currentCard);
                 currentCard.style.display = "block";
             }
             else if (count === cardId.length) {
@@ -31,11 +27,8 @@ function cardDisplay(cardId, previous, next) {
                 constantCard.style.display = "none";
 
                 i -= 1;
-                console.log(i);
                 count = i + 1;
-                console.log(count);
                 let currentCard = cardId[i];
-                console.log(currentCard);
                 currentCard.style.display = "block";
             }
             else {
@@ -43,11 +36,8 @@ function cardDisplay(cardId, previous, next) {
                 constantCard.style.display = "none";
 
                 i -= 1;
-                console.log(i);
                 count = i + 1;
-                console.log(count);
                 let currentCard = cardId[i];
-                console.log(currentCard);
                 currentCard.style.display = "block";
             }
         }
@@ -55,31 +45,23 @@ function cardDisplay(cardId, previous, next) {
 
     next.addEventListener('click', function (check) {
         if (check.target) {
-            console.log("next btn is clicked");
 
             if (count === cardId.length) {
                 constantCard = cardId[i];
                 constantCard.style.display = "none";
+                
                 i = 0;
-                count = 0;
-
-                console.log(i);
                 let currentCard = cardId[i];
-                console.log(currentCard);
                 currentCard.style.display = "block";
-                console.log(count);
             }
             else {
                 constantCard = cardId[i];
                 constantCard.style.display = "none";
 
                 i += 1;
-                console.log(i);
                 let currentCard = cardId[i];
-                console.log(currentCard);
                 currentCard.style.display = "block";
                 count = i + 1;
-                console.log(count);
             }
         }
     });
